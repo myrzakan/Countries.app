@@ -1,13 +1,50 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* Typagraphy */
+  --fmily: 'Montserrat Alternates', sans-serif;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fw-light: 300;
+  --fw-normal: 600;
+  --fw-bold: 800;
+
+  /* Other */
+  --radii: 0.5rem;
+}
+
+body[data-theme='dark'] {
+  --color-text: #FEFEFA;
+  --color-bg: #353839;
+  --colors-ui-base: #343434;
+  --transition-duration: 0.8s;
+
+  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+
+}
+
+body[data-theme='light'] {
+  --color-text: #010B13;
+  --color-bg: #E5E4E2;
+  --colors-ui-base: #C0C0C0;
+  --transition-duration: 0.8s;
+
+
+  --shadow: rgba(149, 157, 165, 0.2) 0 8px 24px; 
+  
+}
+
+body {
+  font-family: var(--fmily);
+  color: var(--color-text);
+  font-weight: var(--fw-light);
+  background-color: var(--color-bg);
+  transition: var(--transition-duration);
+  
 }
