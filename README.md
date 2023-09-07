@@ -30,8 +30,9 @@
   Клонируйте репозиторий на свой компьютер:
 
 
-` git clone [ссылка на ваш репозиторий] 
-  cd countries-react`
+` git clone git@github.com:myrzakan/Countries.app.git `
+
+ ` cd countries`
 
 
 ### Установите зависимости, запустив команду:
