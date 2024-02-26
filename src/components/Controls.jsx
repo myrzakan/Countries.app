@@ -1,16 +1,16 @@
 // Controls.js
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { Search } from "./Seacrh";
-import CustomSelectStyled from "./CustomSelect";
+import CustomSelectStyled from './CustomSelect';
+import { Search } from './Seacrh';
 
 const options = [
-  { value: "Africa", label: "Africa" },
-  { value: "America", label: "America" },
-  { value: "Asia", label: "Asia" },
-  { value: "Europe", label: "Europe" },
-  { value: "Oceania", label: "Oceania" },
+  { value: 'Africa', label: 'Africa' },
+  { value: 'America', label: 'America' },
+  { value: 'Asia', label: 'Asia' },
+  { value: 'Europe', label: 'Europe' },
+  { value: 'Oceania', label: 'Oceania' },
 ];
 
 const Wrapper = styled.div`
@@ -25,16 +25,14 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Controls = ({onSearch}) => {
-  const [search, setSearch] = React.useState("");
-  const [region, setRegion] = React.useState("");
+export const Controls = ({ onSearch }) => {
+  const [search, setSearch] = React.useState('');
+  const [region, setRegion] = React.useState('');
 
   React.useEffect(() => {
-    const regionValue = region?.value || ''
-    onSearch(search, regionValue)
-  }, [search, region])
-
-
+    const regionValue = region?.value || '';
+    onSearch(search, regionValue);
+  }, [search, region]);
 
   return (
     <Wrapper>

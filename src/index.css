@@ -35,8 +35,8 @@ body[data-theme='light'] {
   --colors-ui-base: #C0C0C0;
   --transition-duration: 0.8s;
 
-  --shadow: rgba(149, 157, 165, 0.2) 0 8px 24px; 
-  
+  --shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
 }
 
 body {
@@ -45,5 +45,5 @@ body {
   font-weight: var(--fw-light);
   background-color: var(--color-bg);
   transition: var(--transition-duration);
-  
+
 }

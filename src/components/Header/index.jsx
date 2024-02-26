@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { BsMoonFill, BsMoon } from "react-icons/bs";
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { BsMoon, BsMoonFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { Container } from "../Container";
+import { Container } from '../Container';
 
 const HeaderEl = styled.header`
   box-shadow: var(--shadow);
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled(Link).attrs({
-  to: "/",
+  to: '/',
 })`
   color: var(--color-text);
   font-size: var(--fs-sm);
@@ -35,12 +35,12 @@ const ModeSwitcher = styled.div`
 `;
 
 export const Header = () => {
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = React.useState('light');
 
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   React.useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
+    document.body.setAttribute('data-theme', theme);
   }, [theme]);
 
   return (
@@ -49,15 +49,15 @@ export const Header = () => {
         <Wrapper>
           <Title>Where is the world?</Title>
           <ModeSwitcher onClick={toggleTheme}>
-            {theme === "light" ? (
+            {theme === 'light' ? (
               <>
                 <BsMoonFill size="14px" />
-                <span style={{ marginLeft: "0.75rem" }}>Dark Theme</span>
+                <span style={{ marginLeft: '0.75rem' }}>Dark Theme</span>
               </>
             ) : (
               <>
                 <BsMoon size="14px" />
-                <span style={{ marginLeft: "0.75rem" }}>Light Theme</span>
+                <span style={{ marginLeft: '0.75rem' }}>Light Theme</span>
               </>
             )}
           </ModeSwitcher>
